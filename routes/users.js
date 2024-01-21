@@ -20,4 +20,4 @@ userschema.plugin(plm)
 
 
 
-module.exports = mongoose.model("user"  , userschema);
+module.exports = mongoose.model("User"  , userschema);
