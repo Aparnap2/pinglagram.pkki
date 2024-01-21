@@ -4,9 +4,9 @@ const userModel = require("./users.js");
 
 const passport = require("passport");
 
-const localstrategy = require ("passport-local")
+const localstrategy = require("passport-local");
 
-passport.use (new localstrategy( userModel.authenticate()));
+passport.use(new localstrategy(userModel.authenticate()));
 router.get("/", function (req, res) {
   res.render("index", { footer: false });
 });
@@ -34,7 +34,7 @@ router.get("/edit", function (req, res) {
 router.get("/upload", function (req, res) {
   res.render("upload", { footer: true });
 });
- 
+
 /////////////////////////////////////////////
 
 router.post("/register", async function (req, res, next) {
@@ -54,9 +54,16 @@ router.post("/register", async function (req, res, next) {
   }
 });
 
-router.post ("/login", passport.authenticate ("local", {
-  successRedirect: "/profile",
-failureRedirect: "/login"}, function (req,res){
-}))
+router.post(
+  "/login",
+  passport.authenticate(
+    "local",
+    {
+      successRedirect: "/profile",
+      failureRedirect: "/",
+    },
+    function (req, res) {}
+  )
+);
 
 module.exports = router;
