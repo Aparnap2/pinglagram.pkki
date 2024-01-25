@@ -1,3 +1,6 @@
+
+
+
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
@@ -9,6 +12,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 const passport = require('passport');
 var app = express();
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
