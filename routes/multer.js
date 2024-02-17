@@ -5,11 +5,15 @@ const cloudinary = require('cloudinary').v2;
 const { CloudinaryStorage } = require('multer-storage-cloudinary');
 
 
+require ('dotenv').config(),
+
 cloudinary.config({
-  cloud_name:'dxoqzy5lt',
-    api_key: '824271955762284',
-    api_secret: 'wlCv2qsaRbktqS3JqKp-AaYeCL0'
-  });
+  cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+  api_key: process.env.CLOUDINARY_API_KEY,
+  api_secret: process.env.CLOUDINARY_API_SECRET
+});
+
+// Now you can use Cloudinary with the securely loaded credentials
 
   
 
