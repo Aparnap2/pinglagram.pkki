@@ -1,8 +1,9 @@
-login & register page
-feed page
-profile page
-picture
-story feature
-edit details
-share to story
-search accounts
+An Instagram clone project [ PRODUCTION READY ]
+
+ using .....
+
+NODE JS 
+EJS 
+EXPRESS JS 
+MONGODB 
+
